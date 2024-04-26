@@ -1,0 +1,12 @@
+body {
+    background-image: url('./images/443798.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  
+  
