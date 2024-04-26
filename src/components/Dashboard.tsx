@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
 
   const deleteCharacter = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:5000/character/${id}`, {
+      await axios.delete(`https://ttrpg-backend.onrender.com/character/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setCharacterSheets(characterSheets.filter(sheet => sheet.id !== id));
