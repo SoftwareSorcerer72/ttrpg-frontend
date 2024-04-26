@@ -19,7 +19,7 @@ const EditUser: React.FC = () => {
   const handleUpdate = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
-      await axios.put('http://localhost:5000/user', user, {
+      await axios.put('https://ttrpg-backend.onrender.com/user', user, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       alert('User updated successfully');
@@ -30,7 +30,7 @@ const EditUser: React.FC = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete('http://localhost:5000/user', {
+      await axios.delete('https://ttrpg-backend.onrender.com/user', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       localStorage.removeItem('token');
