@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/character-sheet/:id" element={<CharacterSheet />} />
         <Route path="/edit-character-sheet/:id" element={<EditCharacterSheet />} />
