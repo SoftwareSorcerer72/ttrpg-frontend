@@ -15,7 +15,7 @@ const SignUp: React.FC = () => {
     try {
       await axios.post('https://ttrpg-backend.onrender.com/signup', { email, password, username });
       alert('Sign up successful');
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       alert('Sign up failed');
       console.error(error);
