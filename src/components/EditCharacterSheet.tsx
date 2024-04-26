@@ -10,7 +10,7 @@ const EditCharacterSheet: React.FC = () => {
 
   useEffect(() => {
     const fetchCharacter = async () => {
-      const result = await axios.get(`http://localhost:5000/character/${id}`, {
+      const result = await axios.get(`https://ttrpg-backend.onrender.com/character/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setCharacter(result.data);
@@ -20,7 +20,7 @@ const EditCharacterSheet: React.FC = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/character/${id}`, character, {
+      await axios.put(`https://ttrpg-backend.onrender.com/character/${id}`, character, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       navigate(`/character-sheet/${id}`);

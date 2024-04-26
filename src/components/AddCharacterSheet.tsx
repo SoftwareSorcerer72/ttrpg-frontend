@@ -64,7 +64,7 @@ const AddCharacterSheet: React.FC = () => {
     };
 
     try {
-      await axios.post('http://localhost:5000/character', JSON.stringify(formData), config);
+      await axios.post('https://ttrpg-backend.onrender.com/character', JSON.stringify(formData), config);
       navigate('/');
     } catch (error) {
       console.error('Failed to add character sheet', error);

@@ -8,7 +8,7 @@ const EditUser: React.FC = () => {
   useEffect(() => {
     // Fetch user data
     const fetchUserData = async () => {
-      const result = await axios.get('http://localhost:5000/user', {
+      const result = await axios.get('https://ttrpg-backend.onrender.com/', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setUser(result.data);

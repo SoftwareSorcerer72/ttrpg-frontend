@@ -13,7 +13,7 @@ const SignUp: React.FC = () => {
   const handleSignUp = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:5000/signup', { email, password, username });
+      await axios.post('https://ttrpg-backend.onrender.com/signup', { email, password, username });
       alert('Sign up successful');
       navigate('/login');
     } catch (error) {
